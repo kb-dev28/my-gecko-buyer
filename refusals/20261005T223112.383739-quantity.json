@@ -1,0 +1,13 @@
+{
+  "ask": "two bags of beans",
+  "step": "check",
+  "field": "quantity",
+  "asked": 2,
+  "found": 1,
+  "where": "prepared",
+  "note": "",
+  "signed": false,
+  "intent": "intents/20261005T223111.269228-two-bags-of-beans.json",
+  "source": "devnet",
+  "at": "2026-10-05T22:31:12.383903+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "ask": "one general-admission ticket",
+  "store": "dev3pack-cafe",
+  "product": "General Admission Ticket",
+  "quantity": 1,
+  "budget_raw": 2000000,
+  "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+  "buyer": "2CiwLDXvRYoy84i3k5JGuEsr7E6y31bhjfiZeDndQjkU",
+  "network": "devnet",
+  "store_authority": "Dt8quRFWgTMrrDgVa4GGFRJWksncskbs1tpYAQHkEPwJ",
+  "menu_price_raw": null,
+  "pinned_at": "2026-10-05T22:30:58.679240+00:00"
+}

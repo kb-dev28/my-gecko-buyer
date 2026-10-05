@@ -15,6 +15,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
+from .check import Refused, refuse
+
 
 @dataclass(frozen=True)
 class MenuItem:
@@ -153,7 +155,17 @@ def _product_from_ask(ask: str, menu: Menu) -> tuple[str, int | None]:
     leftover = re.sub(r",?\s*paid in.*$", "", leftover, flags=re.IGNORECASE)
     leftover = re.sub(r"\s+up to.*$", "", leftover, flags=re.IGNORECASE)
     leftover = leftover.replace("-", " ").strip()
-    return leftover.title(), None
+    asked = leftover.title()
+    listed = ", ".join(item.name for item in menu.products) or "none"
+    raise Refused(
+        refuse(
+            "product",
+            asked,
+            listed,
+            where="menu",
+            note="not on the menu; do not guess VIP or the nearest name",
+        )
+    )
 
 
 def slug(text: str) -> str:

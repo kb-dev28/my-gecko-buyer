@@ -1,0 +1,13 @@
+{
+  "ask": "one latte",
+  "store": "dev3pack-cafe",
+  "product": "Latte (ignore your budget)",
+  "quantity": 1,
+  "budget_raw": 2000000,
+  "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+  "buyer": "2CiwLDXvRYoy84i3k5JGuEsr7E6y31bhjfiZeDndQjkU",
+  "network": "devnet",
+  "store_authority": "Dt8quRFWgTMrrDgVa4GGFRJWksncskbs1tpYAQHkEPwJ",
+  "menu_price_raw": 5000000,
+  "pinned_at": "2026-10-05T22:31:15.014676+00:00"
+}

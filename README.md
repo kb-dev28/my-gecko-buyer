@@ -5,9 +5,9 @@
 ![Solana](https://img.shields.io/badge/Solana-devnet-9945FF)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-**The buyer pins the ask, checks seven fields, and on recorded answers lands one espresso
-([explorer](https://explorer.solana.com/tx/4yc7jA8LAjpZc3FXyMBbaeYqJMRQmr5Dmwmhj5Nos7ZrmTzuhftMa76UR6M3UwMLVLXWMXpaXAhhorMieUoXBZzf?cluster=devnet))
-or names the field that disagreed. Live landing for `FaYWqJXHgTVJuJJhworKDqgg1MR4TFC92MxrcwYgTtJd` is waiting on class tokens (`receipt-failed`).**
+**The buyer pins the ask, checks seven fields, and landed one espresso on devnet
+([explorer](https://explorer.solana.com/tx/npTaeRwv2W1rVV4VSwHdehiaDPSeCNcBr8FgdwY9UREqdMmVtdkLsEK6Eo8NsyoH4foLc3ddquq441JfAZqhG2o?cluster=devnet)).
+The other five asks refuse by field. `make smoke` is 6/6.**
 
 Open your own store on Solana devnet and build a buyer agent that buys from it through
 Gecko: it pins what was asked before any bytes exist, refuses by field when the prepared
