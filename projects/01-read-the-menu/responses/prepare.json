@@ -1,0 +1,87 @@
+{
+  "refused": true,
+  "code": "receipt-failed",
+  "reason": "the simulation did not pass, so no transaction is returned: a transaction that reverts against observed state would only cost you a fee on chain. Likely cause: sender_token_account 3jviA6UH6BaHknhDeP4svi8W8qAenuibSeKbUdgh6zx6 does not exist on devnet \u2014 the buyer holds no token account for the store's mint. Fund the buyer with the price in that mint (creating the token account needs ~0.002 SOL of rent on top of the fee)",
+  "network": "devnet",
+  "status": "fail",
+  "revert_class": "account_error",
+  "units_consumed": 14928,
+  "diagnosis": "sender_token_account 3jviA6UH6BaHknhDeP4svi8W8qAenuibSeKbUdgh6zx6 does not exist on devnet \u2014 the buyer holds no token account for the store's mint. Fund the buyer with the price in that mint (creating the token account needs ~0.002 SOL of rent on top of the fee)",
+  "accounts": [
+    {
+      "account": "receipts",
+      "address": "AzJW94Hpu8wnNpQ9DyCvyann24tmdDKhfdKn9GxFYX5f",
+      "role": "the store's ONE account \u2014 its products, its receipt list, its authority; every instruction in the lifecycle writes this same account",
+      "writable": true,
+      "signer": false,
+      "derivation": "PDA(['receipts', store], let_me_buy) \u2014 derived here, offline",
+      "provenance": "extracted"
+    },
+    {
+      "account": "signer",
+      "address": "FaYWqJXHgTVJuJJhworKDqgg1MR4TFC92MxrcwYgTtJd",
+      "role": "the BUYER \u2014 pays the price and the fee, and the only signature this transaction needs",
+      "writable": true,
+      "signer": true,
+      "derivation": "you supplied it"
+    },
+    {
+      "account": "authority",
+      "address": "Dt8quRFWgTMrrDgVa4GGFRJWksncskbs1tpYAQHkEPwJ",
+      "role": "the merchant who owns the store. Writable but NOT a signer: the merchant does not co-sign a sale, the program checks this against receipts.authority",
+      "writable": true,
+      "signer": false,
+      "derivation": "read from the store's own account (not derivable from its name)"
+    },
+    {
+      "account": "mint",
+      "address": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+      "role": "the currency the product is priced in, fixed when the merchant listed it",
+      "writable": false,
+      "signer": false,
+      "derivation": "read from the store's own account, per product"
+    },
+    {
+      "account": "sender_token_account",
+      "address": "3jviA6UH6BaHknhDeP4svi8W8qAenuibSeKbUdgh6zx6",
+      "role": "the BUYER's token account \u2014 this is the one that is DEBITED",
+      "writable": true,
+      "signer": false,
+      "derivation": "ATA(buyer, token_program, mint) \u2014 derived here, offline",
+      "provenance": "extracted"
+    },
+    {
+      "account": "recipient_token_account",
+      "address": "65mWSJb1xkg9GhXcker6ERJAddAYRp48QY5jKyGDughM",
+      "role": "the STORE's token account \u2014 this is the one that is CREDITED",
+      "writable": true,
+      "signer": false,
+      "derivation": "ATA(authority, token_program, mint) \u2014 derived here, offline",
+      "provenance": "extracted"
+    },
+    {
+      "account": "token_program",
+      "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+      "role": "classic SPL Token, pinned by the IDL",
+      "writable": false,
+      "signer": false,
+      "derivation": "pinned program id"
+    },
+    {
+      "account": "system_program",
+      "address": "11111111111111111111111111111111",
+      "role": "the system program",
+      "writable": false,
+      "signer": false,
+      "derivation": "pinned program id"
+    },
+    {
+      "account": "associated_token_program",
+      "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+      "role": "the associated-token program, which creates a missing token account",
+      "writable": false,
+      "signer": false,
+      "derivation": "pinned program id"
+    }
+  ]
+}

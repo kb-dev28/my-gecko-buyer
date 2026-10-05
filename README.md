@@ -5,10 +5,14 @@
 ![Solana](https://img.shields.io/badge/Solana-devnet-9945FF)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-**Open your own store on Solana devnet and build a buyer agent that buys from it through
+**The buyer pins the ask, checks seven fields, and on recorded answers lands one espresso
+([explorer](https://explorer.solana.com/tx/4yc7jA8LAjpZc3FXyMBbaeYqJMRQmr5Dmwmhj5Nos7ZrmTzuhftMa76UR6M3UwMLVLXWMXpaXAhhorMieUoXBZzf?cluster=devnet))
+or names the field that disagreed. Live landing for `FaYWqJXHgTVJuJJhworKDqgg1MR4TFC92MxrcwYgTtJd` is waiting on class tokens (`receipt-failed`).**
+
+Open your own store on Solana devnet and build a buyer agent that buys from it through
 Gecko: it pins what was asked before any bytes exist, refuses by field when the prepared
 purchase disagrees, signs only after a passing simulation, and writes one receipt, read
-from the ledger, that says what moved.**
+from the ledger, that says what moved.
 
 You ask once, in plain words. Your agent reads the menu through Gecko, gets the purchase
 prepared as unsigned bytes, checks every field against what you asked, signs only if they

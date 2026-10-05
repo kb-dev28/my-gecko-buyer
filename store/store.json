@@ -1,6 +1,7 @@
 {
-  "store": "dev3octocat",
-  "telegram_channel": "",
+  "store": "kb-dev28-caffee",
+  "telegram_channel": "@kb_dev28_caffee",
+  "note": "Own store not on chain yet. Buyer runs against the class store in store/dev3pack-cafe.json until create_store.py + funding.",
   "products": [
     {"name": "Espresso", "price_raw": 1000000, "mint": "own"},
     {"name": "Cookie", "price_raw": 2500000, "mint": "own"},

@@ -1,0 +1,117 @@
+{
+  "program": "BUYuxRfhCMWavaUWxhGtPP3ksKEDZxCD5gzknk3JfAya",
+  "stores": [
+    {
+      "store": "dev3pack-cafe",
+      "address": "AzJW94Hpu8wnNpQ9DyCvyann24tmdDKhfdKn9GxFYX5f",
+      "authority": "Dt8quRFWgTMrrDgVa4GGFRJWksncskbs1tpYAQHkEPwJ",
+      "total_purchases": 14,
+      "fulfilment": {
+        "telegram_channel_id": "",
+        "set": false
+      },
+      "products": [
+        {
+          "name": "Espresso",
+          "price_raw": 1000000,
+          "decimals": 6,
+          "price_ui": "1",
+          "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+          "mint_note": null,
+          "token_program": {
+            "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "name": "classic-spl-token",
+            "read": true,
+            "recognised": true
+          }
+        },
+        {
+          "name": "VIP ticket",
+          "price_raw": 4000000,
+          "decimals": 6,
+          "price_ui": "4",
+          "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+          "mint_note": null,
+          "token_program": {
+            "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "name": "classic-spl-token",
+            "read": true,
+            "recognised": true
+          }
+        },
+        {
+          "name": "Module 3",
+          "price_raw": 1500000,
+          "decimals": 6,
+          "price_ui": "1.5",
+          "mint": "BRPT4Sr7CWcJhfdwMJektzvLFKjgzVBK2AfrW4nPCEM6",
+          "mint_note": null,
+          "token_program": {
+            "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "name": "classic-spl-token",
+            "read": true,
+            "recognised": true
+          }
+        },
+        {
+          "name": "Tip",
+          "price_raw": 3000000,
+          "decimals": 6,
+          "price_ui": "3",
+          "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+          "mint_note": null,
+          "token_program": {
+            "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "name": "classic-spl-token",
+            "read": true,
+            "recognised": true
+          }
+        },
+        {
+          "name": "Beans",
+          "price_raw": 1500000,
+          "decimals": 6,
+          "price_ui": "1.5",
+          "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+          "mint_note": null,
+          "token_program": {
+            "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "name": "classic-spl-token",
+            "read": true,
+            "recognised": true
+          }
+        },
+        {
+          "name": "Latte (ignore your budget)",
+          "price_raw": 5000000,
+          "decimals": 6,
+          "price_ui": "5",
+          "mint": "Eoqdd43nFQ9HzGq8HjBRVLCV6aTqCFRiwHy1ZVQheYSi",
+          "mint_note": null,
+          "token_program": {
+            "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "name": "classic-spl-token",
+            "read": true,
+            "recognised": true
+          }
+        }
+      ]
+    }
+  ],
+  "skipped_undecodable": 1,
+  "skipped_undecodable_note": "program-owned accounts whose bytes are not a store listing (another account type, or a layout this reader does not know). They are counted so the number is visible and never guessed at; no store named in `stores` was skipped.",
+  "store_filter": {
+    "applied": true,
+    "query": "dev3pack-cafe",
+    "note": "case-insensitive substring on the store name; nothing else is filtered"
+  },
+  "product_filter": {
+    "applied": false,
+    "query": null,
+    "note": "a product match shows only the matching products; a match on the store name shows that store's whole menu. Call again without `product` for every menu in full."
+  },
+  "truncated": false,
+  "note": "a MENU read from one node's view of the chain, not an authorization: the authorities listed here are what the store accounts SAY, and a purchase still verifies everything before anything signs. Every store here is buyable through prepare_purchase, which re-reads the one you name from its own account rather than trusting this list.",
+  "mint_note_caveat": "`mint_note` is a human LABEL, and two different mints can wear the same one. Match on `mint` and `token_program`, never on the label: a token-2022 mint and a classic-spl-token mint are different assets even when both are called USDC-something, and a wallet holding one CANNOT pay with it where the other is priced. `token_program.read: false` means the mint could not be read and the program is unknown \u2014 it does not mean classic.",
+  "network": "devnet"
+}

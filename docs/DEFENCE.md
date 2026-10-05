@@ -10,13 +10,13 @@ moved) or a **refusal** (it did not sign, and this is the field that disagreed).
 
 | Min | On screen | Backed by | What I say |
 |---|---|---|---|
-| 0:00 | your README's first lines: the sentence and the explorer link | `README.md` | |
-| 0:45 | your assistant with Gecko connected: `list_stores` shows *your* store | `docs/connect.md`, `store/store.json` | |
-| 1:30 | the live buy: pin, prepare, 7 ticks, sign, verify, submit | `uv run buyer "one espresso" --devnet` | |
-| 2:30 | the landing: the explorer, then the receipt with ledger deltas | `receipts/<sig8>.md` | |
-| 3:15 | **the injected failure**: the judge draws a card; your buyer refuses and signs nothing | `buyer/check.py`, `refusals/` | |
-| 4:30 | tests and the five-case table; one test that was red first | `uv run pytest`, `docs/EVAL_REPORT.md` | |
-| 5:15 | the ADR: the decision, and what would reverse it | `docs/adr/0001-refusals-before-signing.md` | |
+| 0:00 | your README's first lines: the sentence and the explorer link | `README.md` | The buyer pins the ask, checks seven fields, and either lands a receipt or names the field. Recorded espresso explorer is the class fixture; my live wallet is still empty. |
+| 0:45 | your assistant with Gecko connected: `list_stores` shows *your* store | `docs/connect.md`, `store/store.json` | `list_stores` on `dev3pack-cafe` / devnet shows six products including `Latte (ignore your budget)`. Channel `@kb_dev28_caffee`. |
+| 1:30 | the live buy: pin, prepare, 7 ticks, sign, verify, submit | `uv run buyer "one espresso" --devnet` | If Gecko is down I switch to `--recorded` and say so. Live prepare today returned `receipt-failed` for my public address. |
+| 2:30 | the landing: the explorer, then the receipt with ledger deltas | `receipts/<sig8>.md` | Recorded receipt: buyer -1000000, store +1000000, total_purchases 0 to 1. I will not pretend that is my wallet. |
+| 3:15 | **the injected failure**: the judge draws a card; your buyer refuses and signs nothing | `buyer/check.py`, `refusals/` | Four cards, all recorded MATCH: quantity, price_raw, signed bytes, blockhash. Nothing signed except tampered, and that is not submitted. |
+| 4:30 | tests and the five-case table; one test that was red first | `uv run pytest`, `docs/EVAL_REPORT.md` | 99 passed. `test_your_work.py` was xfail on `NotYetWritten` until the checks existed. Recorded 6/6. |
+| 5:15 | the ADR: the decision, and what would reverse it | `docs/adr/0001-refusals-before-signing.md` | Exact names, addresses, integers. Reversal: a live purchase that lands two units from one prepare. |
 
 The **finalists** (the students presenting on Friday, named by the instructor) may do
 minute 1:30 on mainnet against geckocoffee instead, with a registered, funded wallet (see
